@@ -1,0 +1,164 @@
+//--Creando la tabla de APPUSER
+
+CREATE TABLE APPUSER
+(
+	idUser SERIAL PRIMARY KEY,
+	fullname character varying (110) NOT NULL,
+	username character varying (30) UNIQUE NOT NULL,
+	password character varying (30) NOT NULL,
+	userType BOOL NOT NULL
+);
+
+ALTER TABLE APPUSER
+OWNER to postgres; 
+
+//--Creando tabla de ADDRESS
+
+CREATE TABLE ADDRESS
+(
+	idAddress SERIAL PRIMARY KEY,
+	idUser INT NOT NULL,
+	address TEXT NOT NULL,
+	CONSTRAINT fk_address_user
+	FOREIGN KEY (idUser) REFERENCES "APPUSER"(idUser) 
+	ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+ALTER TABLE ADDRESS
+OWNER to postgres; 
+
+//--Elaborando tabla de BUSINESS
+
+CREATE TABLE BUSINESS
+(
+	idBusiness SERIAL PRIMARY KEY,
+	name VARCHAR(50),
+	description TEXT
+);
+
+//--Elaborando tabla de PRODUCT
+
+CREATE TABLE PRODUCT
+(
+	idProduct SERIAL PRIMARY KEY,
+	idBusiness INT NOT NULL,
+	name character varying (50),
+	CONSTRAINT fk_product_business
+	FOREIGN KEY (idBusiness) REFERENCES BUSINESS(idBusiness)
+	ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+//--Creando la tabla de APPORDER
+
+CREATE TABLE APPORDER(
+
+	idOrder SERIAL PRIMARY KEY,
+	createDate DATE NOT NULL,
+	idProduct INT NOT NULL,
+	idAddress INT NOT NULL,
+	CONSTRAINT fk_order_product
+	FOREIGN KEY (idProduct) REFERENCES PRODUCT(idProduct)
+	ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT fk_order_address
+	FOREIGN KEY (idAddress) REFERENCES "ADDRESS"(idAddress)
+	ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+ALTER TABLE APPORDER
+OWNER to postgres;
+
+//Para verficar la creación de la tabla y ver datos agregados únicamente de APPUSER
+Select * from APPUSER
+
+//Para verficar la creación de la tabla y ver datos agregados únicamente de ADDRESS
+Select * from ADDRESS
+
+//-- Obtener todas las direcciones de un usuario (segun id)
+SELECT ad.idAddress, ad.address FROM ADDRESS ad WHERE idUser = 1
+
+//Para verficar la creación de la tabla y ver datos agregados únicamente de business
+Select * from business
+
+//Para verficar la creación de la tabla y ver datos agregados únicamente de product
+Select * from product
+
+//-- Obtener todos los productos de un negocio (segun id)
+SELECT p.idProduct, p.name FROM PRODUCT p WHERE idBusiness = 1
+
+//Para verficar la creación de la tabla y ver datos agregados únicamente de APPORDER
+Select * from APPORDER
+
+//-- Obtener todas las ordenes
+SELECT ao.idOrder, ao.createDate, pr.name, au.fullname, ad.address
+FROM APPORDER ao, ADDRESS ad, PRODUCT pr, APPUSER au
+WHERE ao.idProduct = pr.idProduct
+AND ao.idAddress = ad.idAddress
+
+//-- Obtener todas las ordenes de un cliente (segun id)
+SELECT ao.idOrder, ao.createDate, pr.name, au.fullname, ad.address
+FROM APPORDER ao, ADDRESS ad, PRODUCT pr, APPUSER au
+WHERE ao.idProduct = pr.idProduct
+AND ao.idAddress = ad.idAddress
+AND ad.idUser = au.idUser
+AND au.idUser = 1;
+
+//-- Agregar usuario (debe ser lo primero en agregar a la base de datos)
+INSERT INTO APPUSER(fullname, username, password, userType)
+VALUES('Alessandro Rodríguez', 'Sandro', 'admin', true);
+
+//-- Agregar direccion (necesita que existan usuarios)
+INSERT INTO ADDRESS(idUser, address) 
+VALUES(1, 'Residencia X, Casa Y, Mejicanos, San Salvador');
+
+//-- Agregar negocio (puede agregarse antes o después de crear usuario)
+INSERT INTO BUSINESS(name, description)
+VALUES ('Pizza hut', 'Venta de pizzas y pastas');
+
+//-- Agregar producto (necesita que existan negocios)
+INSERT INTO PRODUCT(idBusiness, name)
+VALUES(1, 'Pizza 4');
+
+//-- Agregar orden (necesita que existan direcciones, productos), en C# tomar la fecha del sistema
+//-- para el date
+INSERT INTO APPORDER(createDate, idProduct, idAddress)
+VALUES('26-05-2020', 1, 1);
+
+//-- Actualizar contrasena usuario
+UPDATE APPUSER SET password = 'nueva' WHERE idUser = 1
+
+//-- Actualizar direccion de usuario
+UPDATE ADDRESS SET address = 'nueva' WHERE idAddress = 1
+
+//-- Eliminar un producto (por id)
+DELETE FROM PRODUCT WHERE idProduct = 1
+
+//-- Eliminar un ususario (por id)
+DELETE FROM APP USER WHERE idUser = 1
+
+//-- Eliminar una direccion (por id)
+DELETE FROM ADDRESS WHERE idAddress = 1
+
+//-- Eliminar un negocio (por id)
+DELETE FROM BUSINESS WHERE idBusiness = 1
+
+//-- Eliminar un producto (por id)
+DELETE FROM PRODUCT WHERE idProduct = 1
+
+//-- Eliminar una orden (por id)
+DELETE FROM APPORDER WHERE idOrder = 1
+
+//-- Devuelve dos columnas: el nombre del producto y la cantidad de veces que se ha pedido
+SELECT b.name AS "Negocio", sum(cp.cant) AS "Total pedidos"
+FROM BUSINESS b,  
+(SELECT p.idBusiness, p.name, count(ap.idProduct) AS "cant"
+FROM PRODUCT p, APPORDER ap
+WHERE p.idProduct = ap.idProduct
+GROUP BY p.idProduct 
+ORDER BY p.name ASC) AS cp
+WHERE b.idBusiness = cp.idBusiness
+GROUP BY b.idBusiness;
+
+
+
+
+

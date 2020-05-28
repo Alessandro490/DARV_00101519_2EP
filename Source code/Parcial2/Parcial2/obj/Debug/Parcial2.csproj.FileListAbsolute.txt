@@ -1,0 +1,74 @@
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\Parcial2.exe.config
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\Parcial2.exe
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\Parcial2.pdb
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\obj\Debug\Parcial2.csprojAssemblyReference.cache
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\obj\Debug\Parcial2.Properties.Resources.resources
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\obj\Debug\Parcial2.csproj.GenerateResource.cache
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\obj\Debug\Parcial2.exe
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\obj\Debug\Parcial2.pdb
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\obj\Debug\Parcial2.Form1.resources
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\obj\Debug\Parcial2.frmInicioSesion.resources
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\obj\Debug\Parcial2.frmcambiarContraseña.resources
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\obj\Debug\Parcial2.exe.config
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\Npgsql.dll
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Buffers.dll
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Memory.dll
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Text.Json.dll
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.ValueTuple.dll
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\Npgsql.pdb
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\Npgsql.xml
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Buffers.xml
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Memory.xml
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Text.Json.xml
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\System.ValueTuple.xml
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\obj\Debug\Parcial2.csproj.CopyComplete
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\LiveCharts.dll
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\LiveCharts.pdb
+C:\Users\drodr\RiderProjects\Parcial2\Parcial2\bin\Debug\LiveCharts.xml
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\Parcial2.exe.config
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\Parcial2.exe
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\Parcial2.pdb
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\LiveCharts.dll
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\Npgsql.dll
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Buffers.dll
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Memory.dll
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Text.Json.dll
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.ValueTuple.dll
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\LiveCharts.pdb
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\LiveCharts.xml
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\Npgsql.pdb
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\Npgsql.xml
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Buffers.xml
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Memory.xml
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Text.Json.xml
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\bin\Debug\System.ValueTuple.xml
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\obj\Debug\Parcial2.csprojAssemblyReference.cache
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\obj\Debug\Parcial2.exe.config
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\obj\Debug\Parcial2.Form1.resources
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\obj\Debug\Parcial2.frmcambiarContraseña.resources
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\obj\Debug\Parcial2.frmInicioSesion.resources
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\obj\Debug\Parcial2.Properties.Resources.resources
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\obj\Debug\Parcial2.csproj.GenerateResource.cache
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\obj\Debug\Parcial2.csproj.CopyComplete
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\obj\Debug\Parcial2.exe
+C:\Users\drodr\Documents\Parcial 2\Source code\Parcial2\Parcial2\obj\Debug\Parcial2.pdb
