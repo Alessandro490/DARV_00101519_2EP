@@ -137,7 +137,6 @@ namespace Preparcial.Vista
             //por lo que se tendrá que agregar un if para evitar esa repetición erroneá de mensaje y solo debería 
             //únicamente en la zona a la cual no se tiene acceso
             
-            //Añadir if para que no muestre mensaje de que no tiene permisos en la primera ventana
             else if(tabControl1.SelectedTab.Name.Equals("generalTab")) 
                 tabControl1.SelectedTab = tabControl1.TabPages[0];
             
@@ -151,7 +150,7 @@ namespace Preparcial.Vista
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-    Application.Exit();
+        Application.Exit();
         }
     }
 }

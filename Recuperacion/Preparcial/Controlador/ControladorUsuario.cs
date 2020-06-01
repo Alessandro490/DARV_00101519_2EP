@@ -72,10 +72,13 @@ namespace Preparcial.Controlador
         {
             try
             {
-                ConexionBD.EjecutarComando("INSERT INTO USUARIO(Usuario, contrasenia, tipo)" +
+             //se debe cambiar el siguiente comando
+             //ConexionBD.EjecutarComando("INSERT INTO USUARIO(Usuario, contrasenia, tipo)
+             //debido a que en la base de datos aparece como nombre no como usuario, entonces ponemos nombre
+                ConexionBD.EjecutarComando("INSERT INTO USUARIO(nombre, contrasenia, tipo)" +
                     $" VALUES('{usuario}', '{usuario}', false)");
 
-                MessageBox.Show("Se ha agregado el nuevo usuario, contrasenia igual al nombre");
+                MessageBox.Show("Se ha agregado el nuevo usuario, contraseña es igual al nombre");
             }
             catch(Exception ex)
             {

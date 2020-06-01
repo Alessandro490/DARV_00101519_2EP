@@ -18,7 +18,7 @@ namespace Preparcial.Controlador
             {
                 productos = ConexionBD.EjecutarConsulta("SELECT * FROM INVENTARIO");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Ha ocurrido un error");
             }
@@ -39,7 +39,7 @@ namespace Preparcial.Controlador
                 dt = ConexionBD.EjecutarConsulta("SELECT * FROM INVENTARIO");
 
                 // Por cada fila del DataTable, crear un nuevo usuario anadiendolo a la lista
-                foreach(DataRow dr in dt.Rows)
+                foreach (DataRow dr in dt.Rows)
                 {
                     productos.Add(new Inventario
                         (
@@ -65,8 +65,10 @@ namespace Preparcial.Controlador
         {
             try
             {
-                ConexionBD.EjecutarComando("INSERT INTO INVENTARIO(nombreArticulo, descripcion, precio, stock)" +
-                    $" VALUES('{nombre}', '{descripcion}', {precio}, {stock})");
+                //Se cambia nombreArticulo debido a que en la base de datos se encuentra nombreArt
+                //Por lo que al no cambiar la variable no nos dejará agregar a la base de datos
+                ConexionBD.EjecutarComando("INSERT INTO INVENTARIO(nombreArt, descripcion, precio, stock)" +
+                                           $" VALUES('{nombre}', '{descripcion}', {precio}, {stock})");
 
                 MessageBox.Show("Se ha agregado el producto");
             }

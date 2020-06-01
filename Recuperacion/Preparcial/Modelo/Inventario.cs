@@ -22,5 +22,5 @@ namespace Preparcial.Modelo
             this.precio = precio;
             this.stock = stock;
         }
-    }
+        }
 }

@@ -12,11 +12,14 @@ namespace Preparcial.Controlador
 
             try
             {
+                //Se debe cambiar la variable i.nombreArticulo pues eso no se encuentra en la base de datos
+                //debe cambiar por i.nombreArt la cual se encuentra en la base de datos y nos permitirá 
+                //agregar articulos a la base de datos
                 pedidos = ConexionBD.EjecutarConsulta("SELECT p.idPedido, i.nombreArt, p.cantidad, i.precio, (i.precio * p.cantidad) AS total" +
-                                            " FROM PEDIDO p, INVENTARIO i, USUARIO u" +
-                                            " WHERE p.idArticulo = i.idArticulo" +
-                                            " AND p.idUsuario = u.idUsuario" +
-                                            $" AND u.idUsuario = {id}");
+                                                      " FROM PEDIDO p, INVENTARIO i, USUARIO u" +
+                                                      " WHERE p.idArticulo = i.idArticulo" +
+                                                      " AND p.idUsuario = u.idUsuario" +
+                                                      $" AND u.idUsuario = {id}");
             }
             catch (Exception ex)
             {
@@ -32,10 +35,13 @@ namespace Preparcial.Controlador
 
             try
             {
+                //Se debe cambiar la variable i.nombreArticulo pues eso no se encuentra en la base de datos
+                //Para realizar la consulta existe el mismo error que arriba pues no concuerda el nombre con la 
+                //Base de datos con i.nombreArt ya se podrá almacenar
                 pedidos = ConexionBD.EjecutarConsulta("SELECT p.idPedido, i.nombreArt, p.cantidad, i.precio, (i.precio * p.cantidad) AS total" +
-                                            " FROM PEDIDO p, INVENTARIO i, USUARIO u" +
-                                            " WHERE p.idArticulo = i.idArticulo" +
-                                            " AND p.idUsuario = u.idUsuario");
+                                                      " FROM PEDIDO p, INVENTARIO i, USUARIO u" +
+                                                      " WHERE p.idArticulo = i.idArticulo" +
+                                                      " AND p.idUsuario = u.idUsuario");
             }
             catch (Exception ex)
             {
