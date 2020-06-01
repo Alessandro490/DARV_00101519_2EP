@@ -62,11 +62,14 @@ namespace Preparcial.Vista
 
         private void bttnAddInventary_Click(object sender, EventArgs e)
         {
-            if (txtProductNameInventary.Text.Equals("") &&
-                txtDescriptionInventary.Text.Equals("") &&
-                txtPriceInventary.Text.Equals("") &&
+            //En este if al poner && solo estaria veriricando que todos los campos esten parcialmente llenos y si hay uno vaío nos saltaría error
+            //pero no tomaría acción mientras que al cambiarlo por un || nos saltaría el mensaje de que todos los campos deben de estar llenos
+            //siendo mas óptimo ocupar || sobre && 
+            if (txtProductNameInventary.Text.Equals("") ||
+                txtDescriptionInventary.Text.Equals("") ||
+                txtPriceInventary.Text.Equals("") ||
                 txtStockInventary.Text.Equals(""))
-                MessageBox.Show("No puede dejar campos vacios");
+                MessageBox.Show("No se puede dejar campos vacios");
             else
             {
                 ControladorInventario.AnadirProducto(txtProductNameInventary.Text, txtDescriptionInventary.Text,
@@ -89,7 +92,10 @@ namespace Preparcial.Vista
 
         private void bttnUpdateStockInventary_Click(object sender, EventArgs e)
         {
-            if (txtUpdateStockIdInventary.Text.Equals("") && txtUpdateStockInventary.Text.Equals(""))
+            //aquí se debió cambiar && debido a que no agarra completamente los stock a actualizar sino más bien puede 
+            //dejar algunos elementos vacíos por eso para evitar esa mala implementación se ocuparán ||
+            //los cuales ocupamos previamente en una situación similar 
+            if (txtUpdateStockIdInventary.Text.Equals("") ||  txtUpdateStockInventary.Text.Equals(""))
                 MessageBox.Show("No puede dejar campos vacios");
             else
             {
@@ -113,7 +119,11 @@ namespace Preparcial.Vista
         {
             if (tabControl1.SelectedTab.Name.Equals("createNewUserTab") && u.Admin)
                 ActualizarCrearUsuario();
-
+            
+            //Como se muestra en la sección de imágenes del repositorio, la tabla  inventario en la sección
+            //de actualizar se encontraba mal nombrada pues decía eliminar en vez de actualizar a pesar que el
+            //button nos decía actualizar
+            
             else if (tabControl1.SelectedTab.Name.Equals("inventaryTab") && u.Admin)
                 ActualizarInventario();
 
@@ -122,6 +132,14 @@ namespace Preparcial.Vista
 
             else if (tabControl1.SelectedTab.Name.Equals("viewOrdersTab") && u.Admin)
                 ActualizarOrdenes();
+            
+            // Al dejar la setencia sin un quinto if no salta el mensaje de no tener permiso dos veces en vez de una 
+            //por lo que se tendrá que agregar un if para evitar esa repetición erroneá de mensaje y solo debería 
+            //únicamente en la zona a la cual no se tiene acceso
+            
+            //Añadir if para que no muestre mensaje de que no tiene permisos en la primera ventana
+            else if(tabControl1.SelectedTab.Name.Equals("generalTab")) 
+                tabControl1.SelectedTab = tabControl1.TabPages[0];
             
             else
             {
